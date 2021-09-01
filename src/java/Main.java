@@ -27,8 +27,19 @@ public class Main {
                 min = nums[i];
             }
         }
-
         return min;
     }
+
+    public static int getEvenNums(int[] nums ){
+        int evenCounter = 0;
+
+        for (int i = 0; i < nums.length ; i++) {
+            if (nums[i] % 2 == 0){
+                evenCounter++;
+            }
+        }
+        return evenCounter;
+    }
+
 
 }
