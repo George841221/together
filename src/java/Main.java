@@ -30,16 +30,26 @@ public class Main {
         return min;
     }
 
-    public static int getEvenNums(int[] nums ){
+    public static int getEvenNums(int[] nums ) {
         int evenCounter = 0;
 
-        for (int i = 0; i < nums.length ; i++) {
-            if (nums[i] % 2 == 0){
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] % 2 == 0) {
                 evenCounter++;
             }
         }
         return evenCounter;
     }
 
+    public static int getOddNumSum(int[] num) {
+        int oddNumSum = 0;
+
+        for (int i = 0; i < num.length; i++) {
+            if (num[i] % 2 != 0) {
+                oddNumSum += num[i];
+            }
+        }
+        return  oddNumSum;
+    }
 
 }
