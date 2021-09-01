@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Main {
@@ -5,7 +7,20 @@ public class Main {
     public static void main(String[] args) {
 
         int[] randomNums = getRandomNums();
+        
+        int minNum = getMin(randomNums);
 
+        int evenNums = getEvenNums(randomNums);
+
+        List<Integer> evenNumsList = getEvenNumsList(randomNums);
+
+        int oddNumSum = getOddNumSum(randomNums);
+
+        System.out.println(randomNums);
+        System.out.println(minNum);
+        System.out.println(evenNums);
+        System.out.println(evenNumsList);
+        System.out.println(oddNumSum);
     }
 
     public static int[] getRandomNums(){
@@ -30,12 +45,23 @@ public class Main {
         return min;
     }
 
-    public static int getEvenNums(int[] nums ) {
+    public static int getEvenNums(int[] nums) {
         int evenCounter = 0;
 
         for (int i = 0; i < nums.length; i++) {
-            if (nums[i] % 2 == 0) {
+            if (nums[i] % 2 == 0){
                 evenCounter++;
+            }
+        }
+        return evenCounter;
+    }
+
+    public static List<Integer> getEvenNumsList(int[] nums ) {
+        List<Integer> evenCounter = new ArrayList<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] % 2 == 0) {
+                evenCounter.add(nums[i]);
             }
         }
         return evenCounter;
