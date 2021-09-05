@@ -37,9 +37,9 @@ public class Main {
     public static int getMin(int[] nums){
         int min = nums[0];
 
-        for (int i = 1; i < nums.length ; i++) {
-            if ( nums[i] < min ){
-                min = nums[i];
+        for (int num :nums) {
+            if ( num < min ){
+                min = num;
             }
         }
         return min;
@@ -48,8 +48,8 @@ public class Main {
     public static int getEvenNums(int[] nums) {
         int evenCounter = 0;
 
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] % 2 == 0){
+        for (int num : nums) {
+            if (num % 2 == 0){
                 evenCounter++;
             }
         }
@@ -59,20 +59,20 @@ public class Main {
     public static List<Integer> getEvenNumsList(int[] nums ) {
         List<Integer> evenCounter = new ArrayList<>();
 
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] % 2 == 0) {
-                evenCounter.add(nums[i]);
+        for (int num : nums) {
+            if (num % 2 == 0) {
+                evenCounter.add(num);
             }
         }
         return evenCounter;
     }
 
-    public static int getOddNumSum(int[] num) {
+    public static int getOddNumSum(int[] nums) {
         int oddNumSum = 0;
 
-        for (int i = 0; i < num.length; i++) {
-            if (num[i] % 2 != 0) {
-                oddNumSum += num[i];
+        for (int num : nums) {
+            if (num % 2 != 0) {
+                oddNumSum += num;
             }
         }
         return  oddNumSum;
